@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonu — Web Developer & WordPress Expert</title>
+<meta name="description" content="Sonu — Professional Web Developer & WordPress Expert based in India. 1 year of building modern, high-converting websites for clients worldwide.">
+<meta property="og:title" content="Sonu | Web Developer & WordPress Expert">
+<meta property="og:description" content="Building modern, high-converting websites.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-aura"></div>
+
+<!-- BLOBS -->
+<div class="blob blob-a"></div>
+<div class="blob blob-b"></div>
+<div class="blob blob-c"></div>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-logo">Sonu.</div>
+  <div class="pre-line"></div>
+  <div class="pre-pct" id="pre-pct">Loading...</div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- MOBILE DRAWER -->
+<div id="mobile-drawer">
+  <a href="#about" class="drawer-link">About</a>
+  <a href="#skills" class="drawer-link">Skills</a>
+  <a href="#services" class="drawer-link">Services</a>
+  <a href="#projects" class="drawer-link">Projects</a>
+  <a href="#testimonials" class="drawer-link">Testimonials</a>
+  <a href="#contact" class="drawer-link">Contact</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <a href="#" class="nav-brand">Sonu.</a>
+  <ul class="nav-menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me →</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-left">
+    <div class="hero-tag"><span class="dot"></span> Wordpress Developer</div>
+    <h1 class="hero-h1" id="hero-h1">
+      <span class="line-wrap"><span class="word"><span>Hello! I'm</span></span></span><br>
+      <span class="line-wrap"><span class="word"><span class="accent">Sonu Kumar</span></span></span><br>
+      <!-- <span class="line-wrap"><span class="word"><span>Websites</span></span></span> -->
+    </h1>
+    <p class="hero-sub" id="hero-sub">
+      Web Developer & WordPress Expert based in India. I craft fast, beautiful, and conversion-focused digital experiences for clients worldwide.
+    </p>
+    <div class="hero-actions" id="hero-btns">
+      <a href="#projects" class="btn-main"><span>View My Work</span> <span>→</span></a>
+      <a href="#contact" class="btn-outline">Hire Me</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div id="head-canvas-wrap">
+      <div class="head-glow"></div>
+      <canvas id="head-canvas"></canvas>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-track"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════ MARQUEE ═══════════════ -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item">WordPress <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Shopify <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Elementor <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">PHP &amp; MySQL <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">JavaScript <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Laravel <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Liquid Templates <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Custom Themes <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">HTML / CSS <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">WooCommerce <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">WordPress <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Shopify <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Elementor <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">PHP &amp; MySQL <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">JavaScript <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Laravel <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Liquid Templates <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">Custom Themes <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">HTML / CSS <span class="marquee-sep">◆</span></div>
+    <div class="marquee-item">WooCommerce <span class="marquee-sep">◆</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-copy">
+      <div class="sec-eyebrow reveal-left" data-n="01">About Me</div>
+      <h2 class="sec-title reveal-up">I Build High-Converting, <br><em> Websites </em></h2>
+      <p class="reveal-up">I'm a <strong>passionate</strong>, WordPress Developer with strong expertise in PHP and custom website development. I specialize in building high-performance, responsive, and SEO-friendly websites that help businesses grow online.</p>
+      <p class="reveal-up">I have experience in creating custom WordPress themes, optimizing website speed, and implementing secure backend solutions using PHP & MySQL.My focus is always on delivering clean design, smooth user experience, and scalable solutions that convert visitors into customers.</p>
+      <div class="about-meta reveal-up">
+        <div class="meta-pill"><span class="ico">📍</span> India</div>
+        <div class="meta-pill"><span class="ico">⚡</span> 1+ Year Experience</div>
+        <div class="meta-pill"><span class="ico">🌐</span> Remote Worldwide</div>
+        <div class="meta-pill"><span class="ico">✅</span> Available Now</div>
+      </div>
+      <div class="counters-grid reveal-up">
+        <div class="counter-card">
+          <div class="counter-num" data-count="1">0</div>
+          <div class="counter-label">Year Exp.</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num" data-count="11">0</div>
+          <div class="counter-label">Projects</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num" data-count="10">0</div>
+          <div class="counter-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+    <div class="tilt-card-wrap reveal-up" id="profileCardWrap">
+      <div class="profile-card" data-tilt data-tilt-max="14" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.08">
+        <div class="profile-avatar">👨‍💻</div>
+        <div class="profile-name">Sonu</div>
+        <div class="profile-role">WEB DEVELOPER · WORDPRESS EXPERT</div>
+        <div class="profile-stack">
+          <span class="stack-badge">WordPress</span>
+          <span class="stack-badge">Shopify</span>
+          <span class="stack-badge">Laravel</span>
+          <span class="stack-badge">PHP</span>
+          <span class="stack-badge">MySQL</span>
+          <span class="stack-badge">JavaScript</span>
+          <span class="stack-badge">Elementor</span>
+          <span class="stack-badge">Liquid</span>
+        </div>
+        <div class="profile-loc">📍 India &nbsp;·&nbsp; Available for remote work</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SKILLS ═══════════════ -->
+<section id="skills">
+  <div class="sec-eyebrow reveal-left" data-n="02">My Stack</div>
+  <h2 class="sec-title reveal-up">Skills &amp; <em>Technologies</em></h2>
+  <div class="skills-grid">
+
+    <div class="skill-card reveal-up" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <span class="sk-icon">🌐</span>
+      <div class="sk-name">HTML5 / CSS3</div>
+      <div class="sk-desc">Semantic markup, Flexbox, Grid, animations, responsive design from scratch.</div>
+      <div class="sk-bar-wrap"><div class="sk-bar" data-w="95"></div></div>
+      <div class="sk-pct">95%</div>
+    </div>
+
+    <div class="skill-card reveal-up" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <span class="sk-icon">⚡</span>
+      <div class="sk-name">JavaScript (ES6+)</div>
+      <div class="sk-desc">DOM manipulation, event handling, async/await, Fetch API, interactive UIs.</div>
+      <div class="sk-bar-wrap"><div class="sk-bar" data-w="80"></div></div>
+      <div class="sk-pct">80%</div>
+    </div>
+
+    <div class="skill-card reveal-up" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <span class="sk-icon">🔵</span>
+      <div class="sk-name">WordPress</div>
+      <div class="sk-desc">Custom themes, plugins, Elementor, WooCommerce, ACF, CPT &amp; performance tuning.</div>
+      <div class="sk-bar-wrap"><div class="sk-bar" data-w="92"></div></div>
+      <div class="sk-pct">92%</div>
+    </div>
+
+    <div class="skill-card reveal-up" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <span class="sk-icon">🟢</span>
+      <div class="sk-name">Shopify</div>
+      <div class="sk-desc">Liquid templates, custom theme development, metafields, store setup &amp; optimization.</div>
+      <div class="sk-bar-wrap"><div class="sk-bar" data-w="85"></div></div>
+      <div class="sk-pct">85%</div>
+    </div>
+
+    <div class="skill-card reveal-up" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <span class="sk-icon">🐘</span>
+      <div class="sk-name">PHP &amp; MySQL</div>
+      <div class="sk-desc">Server-side logic, database design, dynamic pages, REST APIs &amp; CRUD operations.</div>
+      <div class="sk-bar-wrap"><div class="sk-bar" data-w="78"></div></div>
+      <div class="sk-pct">78%</div>
+    </div>
+
+    <div class="skill-card reveal-up" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <span class="sk-icon">🔴</span>
+      <div class="sk-name">Laravel</div>
+      <div class="sk-desc">MVC architecture, Eloquent ORM, Blade templates, routing &amp; Artisan CLI.</div>
+      <div class="sk-bar-wrap"><div class="sk-bar" data-w="72"></div></div>
+      <div class="sk-pct">72%</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<section id="services">
+  <div class="sec-eyebrow reveal-left" data-n="03">What I Do</div>
+  <h2 class="sec-title reveal-up">My <em>Services</em></h2>
+  <div class="services-grid">
+    <div class="srv-item reveal-up">
+      <span class="srv-n">01</span>
+      <span class="srv-icon">🎨</span>
+      <div class="srv-title">WordPress Development</div>
+      <div class="srv-desc">Custom WordPress themes built from scratch using PHP, HTML, CSS & ACF. Fully responsive, fast, and optimized for SEO. Elementor & Gutenberg expert.</div>
+      <div class="srv-arrow">↗</div>
+    </div>
+    <div class="srv-item reveal-up">
+      <span class="srv-n">02</span>
+      <span class="srv-icon">🛒</span>
+      <div class="srv-title">Shopify Store Setup</div>
+      <div class="srv-desc">Complete Shopify store setup and custom theme development with Liquid. Custom sections, metafields, apps integration & checkout optimization.</div>
+      <div class="srv-arrow">↗</div>
+    </div>
+    <div class="srv-item reveal-up">
+      <span class="srv-n">03</span>
+      <span class="srv-icon">💻</span>
+      <div class="srv-title">Custom Web Development</div>
+      <div class="srv-desc">Hand-coded HTML/CSS/JavaScript websites with smooth animations, clean code, and mobile-first responsive layouts that load in under 2 seconds.</div>
+      <div class="srv-arrow">↗</div>
+    </div>
+    <div class="srv-item reveal-up">
+      <span class="srv-n">04</span>
+      <span class="srv-icon">⚙️</span>
+      <div class="srv-title">Laravel Applications</div>
+      <div class="srv-desc">Full-stack web apps using Laravel & MySQL. REST APIs, authentication systems, admin dashboards, CRUD applications & database architecture.</div>
+      <div class="srv-arrow">↗</div>
+    </div>
+    <div class="srv-item reveal-up">
+      <span class="srv-n">05</span>
+      <span class="srv-icon">📱</span>
+      <div class="srv-title">Responsive & Mobile Design</div>
+      <div class="srv-desc">Every website I build is designed mobile-first and tested across all major devices and browsers for pixel-perfect consistency everywhere.</div>
+      <div class="srv-arrow">↗</div>
+    </div>
+    <div class="srv-item reveal-up">
+      <span class="srv-n">06</span>
+      <span class="srv-icon">🚀</span>
+      <div class="srv-title">SEO & Performance</div>
+      <div class="srv-desc">Core Web Vitals optimization, speed improvements, technical SEO setup, image compression, caching & structured data for higher search rankings.</div>
+      <div class="srv-arrow">↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROJECTS ═══════════════ -->
+<section id="projects">
+  <div class="sec-eyebrow reveal-left" data-n="04">Portfolio</div>
+  <h2 class="sec-title reveal-up">Live <em>Projects</em></h2>
+  <div class="projects-grid" id="projectsGrid">
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://osrsales.us" alt="OSR Sales" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#1a0a00,#4a2000)">⚔️</div>
+        <div class="proj-overlay"></div>
+        <a href="https://osrsales.us" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">E-Commerce</div>
+        <div class="proj-title">OSR Sales</div>
+        <div class="proj-desc">Gaming e-commerce platform for OSRS gold & items. Custom product pages with dynamic pricing and secure checkout flow.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">WooCommerce</span><span class="proj-tag">PHP</span></div>
+          <a href="https://osrsales.us" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://visiondisplay.in" alt="Vision Display" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#001a33,#003366)">🖥️</div>
+        <div class="proj-overlay"></div>
+        <a href="https://visiondisplay.in" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Business</div>
+        <div class="proj-title">Vision Display</div>
+        <div class="proj-desc">Professional display solutions company website with product catalogue, service pages, and responsive corporate design.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Elementor</span><span class="proj-tag">CSS3</span></div>
+          <a href="https://visiondisplay.in" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://clinicsbydesign.com.au" alt="Clinics By Design" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#001a1a,#004040)">🏥</div>
+        <div class="proj-overlay"></div>
+        <a href="https://clinicsbydesign.com.au" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Healthcare · Australia</div>
+        <div class="proj-title">Clinics By Design</div>
+        <div class="proj-desc">Premium clinic design & fitout company website. Clean medical aesthetic with appointment booking and service showcase.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Custom Theme</span><span class="proj-tag">JS</span></div>
+          <a href="https://clinicsbydesign.com.au" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://hopesidegucha.com" alt="Hopeside Gucha" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#001400,#003300)">🌿</div>
+        <div class="proj-overlay"></div>
+        <a href="https://hopesidegucha.com" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">NGO / Community</div>
+        <div class="proj-title">Hopeside Gucha</div>
+        <div class="proj-desc">Community organization website with program listings, donation integration, news section, and impact stories.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">PHP</span><span class="proj-tag">Elementor</span></div>
+          <a href="https://hopesidegucha.com" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://hopesidefaisalabad.com" alt="Hopeside Faisalabad" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#0a1a00,#1a3300)">🤝</div>
+        <div class="proj-overlay"></div>
+        <a href="https://hopesidefaisalabad.com" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">NGO / Community</div>
+        <div class="proj-title">Hopeside Faisalabad</div>
+        <div class="proj-desc">Branch site for Hopeside organization in Faisalabad. Event calendar, volunteer sign-up, and community programs.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Custom Theme</span><span class="proj-tag">CSS3</span></div>
+          <a href="https://hopesidefaisalabad.com" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://sarafthejeweller.com" alt="Saraf The Jeweller" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#1a1000,#3d2a00)">💍</div>
+        <div class="proj-overlay"></div>
+        <a href="https://sarafthejeweller.com" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Luxury E-Commerce</div>
+        <div class="proj-title">Saraf The Jeweller</div>
+        <div class="proj-desc">Premium jewellery brand website with elegant product display, custom filtering, wishlist, and luxury shopping experience.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">Shopify</span><span class="proj-tag">Liquid</span><span class="proj-tag">Custom Theme</span></div>
+          <a href="https://sarafthejeweller.com" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://sunaarbystj.com" alt="Sunaar by STJ" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#1a0d00,#4d2900)">✨</div>
+        <div class="proj-overlay"></div>
+        <a href="https://sunaarbystj.com" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Jewellery Brand</div>
+        <div class="proj-title">Sunaar by STJ</div>
+        <div class="proj-desc">Sister brand jewellery store with unique product pages, lookbook gallery, custom collections, and seamless mobile experience.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">Shopify</span><span class="proj-tag">Liquid</span><span class="proj-tag">JS</span></div>
+          <a href="https://sunaarbystj.com" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://stakk.co.uk" alt="Stakk" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#00001a,#000033)">📦</div>
+        <div class="proj-overlay"></div>
+        <a href="https://stakk.co.uk" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">SaaS / UK</div>
+        <div class="proj-title">Stakk</div>
+        <div class="proj-desc">UK-based tech platform website with modern landing page design, feature sections, pricing tables, and call-to-action flows.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Custom Theme</span><span class="proj-tag">PHP</span></div>
+          <a href="https://stakk.co.uk" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://pactechsolutions.com" alt="PAC Tech Solutions" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#001a33,#002b4d)">🔧</div>
+        <div class="proj-overlay"></div>
+        <a href="https://pactechsolutions.com" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Technology</div>
+        <div class="proj-title">PAC Tech Solutions</div>
+        <div class="proj-desc">IT solutions company website with service showcases, case studies, team section, and corporate contact forms.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Elementor</span><span class="proj-tag">CSS3</span></div>
+          <a href="https://pactechsolutions.com" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://sulkasearch.com" alt="Sulka Search" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#1a0a1a,#330033)">🔍</div>
+        <div class="proj-overlay"></div>
+        <a href="https://sulkasearch.com" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Search Tool</div>
+        <div class="proj-title">Sulka Search</div>
+        <div class="proj-desc">Custom search and directory platform with advanced filtering, category pages, and optimized user experience for discovery.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">PHP</span><span class="proj-tag">MySQL</span></div>
+          <a href="https://sulkasearch.com" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-perspective="900">
+      <div class="proj-img">
+        <img src="https://image.thum.io/get/width/600/crop/380/https://shreesaihospital.in" alt="Shree Sai Hospital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="proj-img-fallback" style="display:none;background:linear-gradient(135deg,#00001a,#001a33)">🏨</div>
+        <div class="proj-overlay"></div>
+        <a href="https://shreesaihospital.in" target="_blank" class="proj-live">↗ Live Site</a>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Healthcare · India</div>
+        <div class="proj-title">Shree Sai Hospital</div>
+        <div class="proj-desc">Hospital website with department listings, doctor profiles, appointment booking, emergency contacts, and patient resources.</div>
+        <div class="proj-footer">
+          <div class="proj-tags"><span class="proj-tag">WordPress</span><span class="proj-tag">Custom Theme</span><span class="proj-tag">PHP</span></div>
+          <a href="https://shreesaihospital.in" target="_blank" class="proj-arrow">↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<!-- <section id="testimonials">
+  <div class="sec-eyebrow reveal-left" data-n="05">Testimonials</div>
+  <h2 class="sec-title reveal-up" style="margin-bottom:40px">What Clients <em>Say</em></h2>
+  <div class="testi-slider reveal-up">
+    <div class="testi-track" id="testiTrack">
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">"</span>
+          <p class="testi-text">Sonu delivered an absolutely stunning Shopify store for our jewellery brand. The attention to detail was exceptional — every product page, the custom theme, the mobile experience — all flawless. Professional communication throughout and delivered on time. Will definitely work with him again.</p>
+          <div class="testi-author">
+            <div class="testi-av">💍</div>
+            <div>
+              <div class="testi-name">Raj Saraf</div>
+              <div class="testi-role">Owner · Saraf The Jeweller</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">"</span>
+          <p class="testi-text">We hired Sonu to build our hospital website and he exceeded every expectation. The site looks modern and professional — patients and staff love it. He understood our requirements perfectly, implemented the appointment system seamlessly, and the site loads incredibly fast. Highly recommended!</p>
+          <div class="testi-author">
+            <div class="testi-av">🏥</div>
+            <div>
+              <div class="testi-name">Dr. Anil Sharma</div>
+              <div class="testi-role">Director · Shree Sai Hospital</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">"</span>
+          <p class="testi-text">Fantastic work on our Clinics by Design website. Sonu understood the premium feel we were going for and delivered it perfectly. Clean code, excellent responsiveness, and our Google PageSpeed score went from 42 to 94. A genuinely talented developer — very happy with the result.</p>
+          <div class="testi-author">
+            <div class="testi-av">🇦🇺</div>
+            <div>
+              <div class="testi-name">Sarah Thompson</div>
+              <div class="testi-role">CEO · Clinics by Design, Australia</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-slide">
+        <div class="testi-card">
+          <span class="testi-quote">"</span>
+          <p class="testi-text">Sonu built our Stakk platform website from ground up — modern, clean, and conversion-focused. He's great at listening to requirements and translating them into a polished product. Quick turnaround, responsive to feedback, and the quality of his code is excellent. Brilliant developer to work with.</p>
+          <div class="testi-author">
+            <div class="testi-av">🇬🇧</div>
+            <div>
+              <div class="testi-name">James Mitchell</div>
+              <div class="testi-role">Co-Founder · Stakk, United Kingdom</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="testi-nav">
+      <button class="testi-btn" id="tPrev">←</button>
+      <div class="testi-dots" id="testiDots"></div>
+      <button class="testi-btn" id="tNext">→</button>
+    </div>
+  </div>
+</section> -->
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact">
+  <div class="sec-eyebrow reveal-left" data-n="06">Get In Touch</div>
+  <h2 class="sec-title reveal-up">Let's Build Something <br><em>Amazing</em></h2>
+  <div class="contact-wrap">
+    <div class="contact-info reveal-left">
+      <p>Have a project in mind? I'd love to hear about it. Whether it's a new website, a WordPress customization, or a Shopify store — let's make it happen.</p>
+      <div class="contact-links">
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="clink">
+          <div class="clink-ico wa">💬</div>
+          <div>
+            <div class="clink-label">WHATSAPP</div>
+            <div class="clink-val">+91 9888848230</div>
+          </div>
+        </a>
+        <a href="mailto:sonu@example.com" class="clink">
+          <div class="clink-ico em">✉️</div>
+          <div>
+            <div class="clink-label">EMAIL</div>
+            <div class="clink-val">sonu027117@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+91XXXXXXXXXX" class="clink">
+          <div class="clink-ico ph">📞</div>
+          <div>
+            <div class="clink-label">CALL</div>
+            <div class="clink-val">+91 9888848230</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form reveal-up">
+      <form id="contactForm" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label>YOUR NAME</label>
+            <input type="text" placeholder="John Doe" required>
+          </div>
+          <div class="form-field">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>SERVICE NEEDED</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>WordPress Website</option>
+            <option>Shopify Store</option>
+            <option>Custom HTML/CSS/JS</option>
+            <option>Laravel Application</option>
+            <option>Website Redesign</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>YOUR MESSAGE</label>
+          <textarea placeholder="Tell me about your project, budget, and timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><span id="submitTxt">Send Message →</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Sonu.</div>
+    <p class="footer-copy">© 2026 <span>Sonu</span>.</p>
+    <!-- <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav> -->
+    <div class="footer-socials">
+      <!-- <a href="#" class="fsoc" title="GitHub">⌥</a> -->
+      <a href="#" class="fsoc" title="LinkedIn">in</a>
+      <a href="#" class="fsoc" title="Twitter">𝕏</a>
+      <!-- <a href="#" class="fsoc" title="Instagram">◎</a> -->
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+   JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script src="script.js"></script>
+</body>
+</html>
